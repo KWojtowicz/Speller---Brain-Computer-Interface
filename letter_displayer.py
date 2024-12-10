@@ -38,7 +38,7 @@ def letters_activity():
     text_content.config(text=current_letter)
 
     # Save letter and timestamp
-    with open("litery_czas.txt", "a") as myfile:
+    with open("Data/litery_czas.txt", "a") as myfile:
         myfile.write(current_letter + ', ' + str(time.time()) + '\n')
 
     # Change index and call letters activity with another argument
