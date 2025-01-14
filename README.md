@@ -1,7 +1,7 @@
 
 # Offline Speller Interface Using Blink Detection
 
-_Grabowska J. & Wojtowicz K., Human-Computer Interaction, Faculty of Psychology and Cognitive Sciences, Adam Mickiewicz University, 2024_
+_Grabowska J. & Wojtowicz K., Human-Computer Interaction, Faculty of Psychology and Cognitive Sciences, Adam Mickiewicz University, 2024/2025_
 
 ## Overview
 This project involves the creation of a simple offline "speller" interface that uses blinking to select letters of the alphabet. The interface displays letters in a loop, records the timestamps of each letter's display, and decodes user inputs based on blink data collected via an OpenBCI EEG electrode.
