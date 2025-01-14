@@ -4,7 +4,7 @@
 _Grabowska J. & Wojtowicz K., Human-Computer Interaction, Faculty of Psychology and Cognitive Sciences, Adam Mickiewicz University, 2024_
 
 ## Overview
-This project involves the creation of a simple offline "speller" interface that uses blinking to select letters of the alphabet. The interface displays letters in a loop, records the timestamps of each letter's display, and decodes user inputs based on blink data collected via an EEG electrode.
+This project involves the creation of a simple offline "speller" interface that uses blinking to select letters of the alphabet. The interface displays letters in a loop, records the timestamps of each letter's display, and decodes user inputs based on blink data collected via an OpenBCI EEG electrode.
 
 The project is designed as part of a cognitive science end-year project and consists of:
 1. A program for displaying letters of the alphabet and logging timestamps.
@@ -14,17 +14,16 @@ The project is designed as part of a cognitive science end-year project and cons
 ---
 
 ## Features
-- **Letter Display Program**:
-  - Displays letters of the alphabet sequentially in a loop.
-  - Logs the timestamps of each letter's display in a file (`litery_czas.txt`).
-  - Includes both text-based and GUI-based versions (e.g., Tkinter, Pygame).
+- **Letter Display Program** ([letter_displayer.py](letter_displayer.py)):
+  - Displays letters of the alphabet sequentially in a loop using tkinter GUI.
+  - Logs the timestamps of each letter's display in a file ([`litery_czas.txt`](Data/litery_czas.txt)).
 
-- **Blink Data Decoding**:
-  - Analyzes EEG blink data to identify selected letters.
+- **Blink Data Decoding** ([EEG_Blinks_Data_Decoder.ipynb](EEG_Blinks_Data_Decoder.ipynb)):
+  - Analyzes EEG data to identify blinks based on based on filtration from [BLINKER Documentation](https://vislab.github.io/EEG-Blinks/).
   - Matches blink timestamps with letter display times.
 
-- **Report**:
-  - Detailed documentation of methods, results, and improvements.
+- **Report** ([Project_Report.md](Project_Report.md)):
+  - Documentation of methods, results, and improvements.
 
 ---
 
@@ -33,10 +32,11 @@ The project is designed as part of a cognitive science end-year project and cons
 - Python 3.7 or higher
 - Required Python libraries:
   - `time`
-  - `tba...`
+  - `tkinter`
   - `numpy`
   - `matplotlib`
-  - `pandas` (optional, for data processing)
+  - `pandas`
+  - `aseegg`
 
 ### Steps
 1. Clone the repository:
@@ -48,31 +48,29 @@ The project is designed as part of a cognitive science end-year project and cons
    ```bash
    pip install -r requirements.txt
    ```
-
+2. Install aseegg library (use a virtual environment if preferred):
+    ```bash
+   pip install ./Libraries/aseegg.py
+   ```
 ---
 
 ## Usage
 ### Letter Display Program
 
-- **Text-based version**:
 
 - **GUI version (Tkinter)**:
 
 
 
 ### Decoding Blink Data
-1. Collect blink data during the letter display session using the provided EEG setup.
-2. Run the Jupyter Notebook for decoding:
+1. Collect blink data during the letter display session using preferred single channel EEG setup.
+2. Open the Jupyter Notebook:
    ```bash
-   jupyter notebook decode_blinks.ipynb
+   jupyter notebook EEG_Blinks_Data_Decoder.ipynb
    ```
-3. Follow the instructions in the notebook to process and decode the blink data.
+3. Select file path for your letters timestamps and EEG data record
 
 ---
-
-## File Structure
-
-
 
 
 ## License

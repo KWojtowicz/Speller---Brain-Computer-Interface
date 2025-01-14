@@ -70,8 +70,8 @@ root.title("Polish Alphabet Letter Displayer")
 root.attributes('-topmost', True)
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-window_width = 1000
-window_height = 700
+window_width = 700
+window_height = 500
 x_position = (screen_width // 2) - (window_width // 2)
 y_position = (screen_height // 2) - (window_height // 2)
 root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
