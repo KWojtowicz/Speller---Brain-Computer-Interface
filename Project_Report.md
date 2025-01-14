@@ -16,7 +16,7 @@ The goal of the project was to develop a simple offline "speller" interface that
 ### **a) Letter Display**
 To display alphabet letters in a loop, the **Tkinter** library was used to create a simple graphical user interface. Each letter was displayed for 1 second and their timestamps were recorded using Unix time format in the `litery_czas.txt` file.
 
-Data recording snippet:
+Data recording:
 ```python
 with open("Data/litery_czas.txt", "a") as myfile:
         myfile.write(current_letter + ', ' + str(time.time()) + '\n')
